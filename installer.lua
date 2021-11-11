@@ -33,3 +33,4 @@ os.sleep(2)
 term.setBackgroundColor(colors.black)
 term.clear()
 term.setCursorPos(1,1)
+--hello
