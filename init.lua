@@ -6,3 +6,4 @@ if (fs.exists("./installer/installer.lua")) then
 end
 shell.run("wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/installer.lua","./installer/installer.lua")
 --hello
+shell.run("./installer/installer.lua")
