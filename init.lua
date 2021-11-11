@@ -1,5 +1,6 @@
-local fs = require("fs")
-fs.makeDir("./installer")
+if (fs.exists("./installer") == false) then
+    fs.makeDir("./installer")
+end
 if (fs.exists("./installer/installer.lua")) then
     fs.delete('./installer/installer.lua')
 end
