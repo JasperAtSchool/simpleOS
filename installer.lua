@@ -1,0 +1,5 @@
+term.setBackgroundColor(colors.white)
+term.clear()
+term.setCursorPos(1,1)
+term.setTextColor(colors.black)
+print("running installer.lua...")

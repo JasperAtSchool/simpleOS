@@ -1,5 +1,7 @@
 {
     "Lua.diagnostics.globals": [
-        "term"
+        "term",
+        "colors",
+        "shell"
     ]
 }
