@@ -14,8 +14,8 @@ local graphics = {
 }
 
 -- Load classes
-graphics.classes.Image = loadfile(cobalt.config.path .. "/lib/modules/graphics/classes/Image.lua")(cobalt)
-graphics.classes.Canvas = loadfile(cobalt.config.path .. "/lib/modules/graphics/classes/Canvas.lua")(cobalt)
+graphics.classes.Image = loadfile("libs/cobalt/lib/modules/graphics/classes/Image.lua")(cobalt)
+graphics.classes.Canvas = loadfile("libs/cobalt/lib/modules/graphics/classes/Canvas.lua")(cobalt)
 
 
 function graphics.setCanvas(canvas)

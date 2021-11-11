@@ -38,40 +38,66 @@ term.clear()
 term.setCursorPos((x/2 - 8),(y/2))
 term.write("testOS installer")
 
+term.setCursorPos((x/2 - 11),(y/2 + 2))
+term.setBackgroundColor(colors.red)
+term.write("                     ")
+term.setCursorPos((x/2 - 11),(y/2 + 2))
+term.setBackgroundColor(colors.green)
+
+
 --create dir
 shell.run("background","mkdir","./libs")
+term.write(" ")
 shell.run("background","mkdir","./libs/testos-ui")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt/lib")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt/lib/modules")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt/lib/modules/graphics")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt/lib/modules/keyboard")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt/lib/modules/mouse")
+term.write(" ")
 shell.run("background","mkdir","./libs/cobalt/lib/modules/graphics/classes")
+term.write(" ")
 
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/startup.lua","./startup.lua")
 
-os.sleep(5)
+os.sleep(2)
 
 
 --install testos-ui
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/main.lua","./main.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/testos-ui/main.lua","./libs/testos-ui/main.lua")
-os.sleep(3)
+term.write(" ")
+os.sleep(2)
 
 --cobalt instalation
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/init.lua","./libs/cobalt/init.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/clasp.lua","./libs/cobalt/lib/clasp.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/surface.lua","./libs/cobalt/lib/surface.lua")
+term.write(" ")
 
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/graphics/init.lua","./libs/cobalt/lib/modules/graphics/init.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/keyboard/init.lua","./libs/cobalt/lib/modules/keyboard/init.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/mouse/init.lua","./libs/cobalt/lib/modules/mouse/init.lua")
+term.write(" ")
 os.sleep(2)
 
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/graphics/init.lua","./libs/cobalt/lib/modules/graphics/classes/Canvas.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/graphics/init.lua","./libs/cobalt/lib/modules/graphics/classes/Drawable.lua")
+term.write(" ")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/graphics/init.lua","./libs/cobalt/lib/modules/graphics/classes/Image.lua")
-os.sleep(5)
-
+term.write(" ")
+os.sleep(3)
 os.reboot()
