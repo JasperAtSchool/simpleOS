@@ -2,7 +2,8 @@
     "Lua.diagnostics.globals": [
         "term",
         "colors",
-        "shell"
+        "shell",
+        "fs"
     ],
     "Lua.diagnostics.disable": [
         "undefined-field"
