@@ -3,5 +3,8 @@
         "term",
         "colors",
         "shell"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-field"
     ]
 }
