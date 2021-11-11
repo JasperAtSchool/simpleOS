@@ -49,6 +49,8 @@ shell.run("background","mkdir","./libs/cobalt/lib/modules/keyboard")
 shell.run("background","mkdir","./libs/cobalt/lib/modules/mouse")
 shell.run("background","mkdir","./libs/cobalt/lib/modules/graphics/classes")
 
+shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/startup.lua","./startup.lua")
+
 os.sleep(5)
 
 
@@ -70,3 +72,5 @@ shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSy
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/graphics/init.lua","./libs/cobalt/lib/modules/graphics/classes/Drawable.lua")
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/libs/cobalt/lib/modules/graphics/init.lua","./libs/cobalt/lib/modules/graphics/classes/Image.lua")
 os.sleep(5)
+
+os.reboot()
