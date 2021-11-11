@@ -1,3 +1,4 @@
+local fs = os.loadAPI("fs")
 fs.makeDir("./installer")
 if (fs.exists("./installer/installer.lua")) then
     fs.delete('./installer/installer.lua')
