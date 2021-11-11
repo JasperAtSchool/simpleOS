@@ -77,6 +77,7 @@ newload("creating ./libs/cobalt/lib/modules/graphics/classes",8)
 shell.run("background","mkdir","./libs/cobalt/lib/modules/graphics/classes")
 
 term.setCursorPos((x/2 - 2),(y/2 + 2))
+term.setBackgroundColor(colors.green)
 
 shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/startup.lua","./startup.lua")
 
