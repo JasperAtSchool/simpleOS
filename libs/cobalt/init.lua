@@ -15,8 +15,12 @@ local cobalt = {
 }
 
 -- Load librares
-cobalt.lib.surface = dofile(cobalt.config.path .. "/lib/surface.lua")
-cobalt.lib.class = dofile(cobalt.config.path .. "/lib/clasp.lua")
+
+--cobalt.lib.surface = dofile(cobalt.config.path .. "/lib/surface.lua")
+--cobalt.lib.class = dofile(cobalt.config.path .. "/lib/clasp.lua")
+
+cobalt.lib.surface = dofile("libs/cobalt/lib/surface.lua")
+cobalt.lib.class = dofile("libs/cobalt/lib/clasp.lua")
 
 
 -- Load modules
