@@ -3,9 +3,11 @@
         "term",
         "colors",
         "shell",
-        "fs"
+        "fs",
+        "createText"
     ],
     "Lua.diagnostics.disable": [
-        "undefined-field"
+        "undefined-field",
+        "unused-function"
     ]
 }
