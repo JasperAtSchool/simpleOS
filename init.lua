@@ -1,3 +1,4 @@
 term.clear()
-term.setCursorPos(1,1)
-print("hello")
+local x,y = term.getSize()
+local text = "installer"
+term.setCursorPos(math.round((x / 2) - (text:len() / 2)), math.round((y / 2)))
