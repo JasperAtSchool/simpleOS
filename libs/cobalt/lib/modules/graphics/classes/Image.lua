@@ -3,7 +3,7 @@ local cobalt = args[1]
 
 local class = cobalt.lib.class
 
-local Drawable = loadfile(cobalt.config.path .. "/lib/modules/graphics/classes/Drawable.lua")(cobalt)
+local Drawable = loadfile("libs/cobalt/lib/modules/graphics/classes/Drawable.lua")(cobalt)
 
 return Drawable:extend {
 	init = function(self, path)
