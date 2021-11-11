@@ -25,7 +25,7 @@ cobalt.lib.class = dofile("libs/cobalt/lib/clasp.lua")
 
 -- Load modules
 local loadModule = function(module)
-	cobalt[module] = loadfile(cobalt.config.path .. "/lib/modules/" .. module .. "/init.lua")(cobalt)
+	cobalt[module] = loadfile("libs/cobalt/lib/modules/"+module+"/init.lua")(cobalt)
 end
 loadModule("graphics")
 loadModule("keyboard")
