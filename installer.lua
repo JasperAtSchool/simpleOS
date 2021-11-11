@@ -1,3 +1,4 @@
+local x,y = term.getSize()
 term.setBackgroundColor(colors.white)
 term.clear()
 term.setCursorPos(1,1)
@@ -30,7 +31,9 @@ term.write(" ")
 os.sleep(0.1)
 term.write(" ")
 os.sleep(2)
-term.setBackgroundColor(colors.black)
+
+term.setBackgroundColor(colors.cyan)
+term.setTextColor(colors.white)
 term.clear()
-term.setCursorPos(1,1)
---hello
+term.setCursorPos((x/2 - 5),(y/2))
+term.write("installer")
