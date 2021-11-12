@@ -4,7 +4,10 @@
         "colors",
         "shell",
         "fs",
-        "createText"
+        "createText",
+        "window",
+        "cctext",
+        "newload"
     ],
     "Lua.diagnostics.disable": [
         "undefined-field",

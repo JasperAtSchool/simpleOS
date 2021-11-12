@@ -1,0 +1,13 @@
+term.setBackgroundColor(colors.white)
+term.setTextColor(colors.black)
+term.clear()
+term.setCursorPos(1,1)
+term.write("Downloading Installer...")
+shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/setup/start.lua","/installer/start.lua")
+shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/setup/tempstartup.lua","/startup.lua")
+shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/setup/license.lua","/installer/license.lua")
+shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/setup/beforedownload.lua","/installer/beforedownload.lua")
+shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/testSystem/main/setup/installer.lua","/installer/installer.lua")
+
+os.sleep(3)
+os.reboot()
