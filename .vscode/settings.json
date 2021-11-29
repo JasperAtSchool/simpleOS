@@ -7,7 +7,9 @@
         "createText",
         "window",
         "cctext",
-        "newload"
+        "newload",
+        "httpinstall",
+        "http"
     ],
     "Lua.diagnostics.disable": [
         "undefined-field",

@@ -24,37 +24,44 @@ function newload(current,index)
     os.sleep(0.1)
 end
 
+function httpinstall(url,path)
+    local res = http.get(url)
+    local file = fs.open(path,"w")
+    file.write(res.readAll())
+end
+
 os.sleep(0.5)
 
 --create dir
 newload("creating ./libs",0)
-shell.run("background","mkdir","./libs")
+fs.makeDir("./libs")
 newload("creating ./libs/testos-ui",1)
-shell.run("background","mkdir","./libs/testos-ui")
+fs.makeDir("./libs/testos-ui")
 newload("creating ./libs/cobalt",2)
-shell.run("background","mkdir","./libs/cobalt")
+fs.makeDir("./libs/cobalt")
 newload("creating ./libs/cobalt/lib",3)
-shell.run("background","mkdir","./libs/cobalt/lib")
+fs.makeDir("./libs/cobalt/lib")
 newload("creating ./libs/cobalt/lib/modules",4)
+fs.makeDir("./libs/cobalt/lib/modules")
 os.sleep(1)
-shell.run("background","mkdir","./libs/cobalt/lib/modules")
+
 newload("creating ./libs/cobalt/lib/modules/graphics",5)
-shell.run("background","mkdir","./libs/cobalt/lib/modules/graphics")
+fs.makeDir("./libs/cobalt/lib/modules/graphics")
 newload("creating ./libs/cobalt/lib/modules/keyboard",6)
-shell.run("background","mkdir","./libs/cobalt/lib/modules/keyboard")
+fs.makeDir("./libs/cobalt/lib/modules/keyboard")
 newload("creating ./libs/cobalt/lib/modules/mouse",7)
-shell.run("background","mkdir","./libs/cobalt/lib/modules/mouse")
+fs.makeDir("./libs/cobalt/lib/modules/mouse")
 newload("creating ./libs/cobalt/lib/modules/graphics/classes",8)
-shell.run("background","mkdir","./libs/cobalt/lib/modules/graphics/classes")
+fs.makeDir("./libs/cobalt/lib/modules/graphics/classes")
 
 term.setCursorPos((x/2 - 2),(y/2 + 2))
 term.setBackgroundColor(colors.green)
 
 newload("deleting old ./startup.lua",9)
-shell.run("background","delete","./startup.lua")
+fs.delete("./startup.lua")
 os.sleep(1)
 newload("creating ./startup.lua",9)
-shell.run("background","wget","https://raw.githubusercontent.com/DJj123dj/simpleOS/main/startup.lua","./startup.lua")
+httpinstall("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/startup.lua","./startup.lua")
 
 os.sleep(2)
 
