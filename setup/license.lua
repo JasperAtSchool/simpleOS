@@ -18,6 +18,11 @@ while pressNext do
     term.setCursorPos((x-11),(y-2))
     term.write("next >")
 
+    term.setCursorPos((x/2),(y-2))
+    local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/version.txt")
+    local versiontext = versionhttp.readAll()
+    term.write("Version "..versiontext)
+
     term.setCursorPos(1,1)
 
 
