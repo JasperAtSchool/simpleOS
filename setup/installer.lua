@@ -28,6 +28,7 @@ function httpinstall(url,path)
     local res = http.get(url)
     local file = fs.open(path,"w")
     file.write(res.readAll())
+    file.close()
 end
 
 os.sleep(0.5)
