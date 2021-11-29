@@ -27,7 +27,7 @@ while pressNext do
     abc.setBackgroundColor(colors.black) 
     cctext = require("cc.strings")
 
-    local text = "The installation can take about 30 seconds to 5 minutes, depending on your computer speed.\n\nDuring the installation tabs will appear at the top of the window, you just have to ignore these, this is for downloading and installing things in the background.\n\nAfter everything has been installed, the computer will restart automatically, and you will get the 'first start' configuration panel.\n\nClick 'next' to start the installation."
+    local text = "The installation can take about 30 seconds to 2 minutes, depending on your computer speed.\n\nDANGER!!\nWhen installing the system some folders/files will be removed.\nMake sure there are no files in the following locations:\n./libs/\n./installer/\n./system/\n./startup.lua\n./simpleos/\n\nAfter everything has been installed, the computer will reboot automatically, and you will get the 'first start' configuration panel.\n\nClick 'next' to start the installation."
     local lines = cctext.wrap(text,(x-11))
     
     for i = 1, #lines do
