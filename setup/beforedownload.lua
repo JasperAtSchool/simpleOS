@@ -1,12 +1,16 @@
 local pressNext = true
 local scrollPos = 0
 local scrollTextLength = 0
-while pressNext do
 
+local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/version.txt")
+local versiontext = versionhttp.readAll()
+
+while pressNext do
     term.setBackgroundColor(colors.cyan)
     term.clear()
-
     x,y = term.getSize()
+
+    local abc = window.create(term.current(),6,4,(x-11),(y-11))
 
     term.setCursorPos((x/2 - 8 ),2) 
     term.write("Before we start:")
@@ -15,24 +19,19 @@ while pressNext do
     term.setCursorPos((6),(y-2))
     term.write("< back")
 
-    term.setCursorPos((x-11),(y-2))
-    term.write("next >")
+    term.setCursorPos((x-14 ),(y-2))
+    term.write("install >")
 
-    term.setCursorPos((x/2),(y-2))
-    local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/version.txt")
-    local versiontext = versionhttp.readAll()
+    term.setCursorPos((x/2 - 20),(y-2))
     term.write("Version "..versiontext)
 
     term.setCursorPos(1,1)
 
 
-    local abc = window.create(term.current(),6,4,(x-11),(y-11))
-
-
     abc.setBackgroundColor(colors.black) 
     cctext = require("cc.strings")
 
-    local text = "The installation can take about 30 seconds to 2 minutes, depending on your computer speed.\n\nDANGER!!\nWhen installing the system some folders/files will be removed.\nMake sure there are no files in the following locations:\n./libs/\n./installer/\n./system/\n./startup.lua\n./simpleos/\n\nAfter everything has been installed, the computer will reboot automatically, and you will get the 'first start' configuration panel.\n\nClick 'next' to start the installation."
+    local text = "The installation can take about 30 seconds to 2 minutes, depending on your computer speed.\n\nAfter everything has been installed, the computer will reboot automatically, and you will get the 'first start' configuration panel.\n\nClick 'install' to start the installation."
     local lines = cctext.wrap(text,(x-11))
     
     for i = 1, #lines do
@@ -43,9 +42,6 @@ while pressNext do
         i = i+1
     end
         abc.scroll(scrollPos)
-
-
-
 
 
 
@@ -83,10 +79,10 @@ while pressNext do
         if lx<12 and lx>5 and ly == (y-2) then
             print("back")
             pressNext = false
-            shell.run("installer/license.lua")
+            shell.run("installer/installerfiles.lua")
         end
         
-        if lx>(x-12) and lx<(x-5) and ly == (y-2) then
+        if lx>(x-15) and lx<(x-5) and ly == (y-2) then
         print("next") 
         pressNext = false
         shell.run("installer/installer.lua")

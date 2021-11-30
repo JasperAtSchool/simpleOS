@@ -1,12 +1,17 @@
 local pressNext = true
 local scrollPos = 0
 local scrollTextLength = 0
+
+local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/version.txt")
+local versiontext = versionhttp.readAll()
+
 while pressNext do
 
     term.setBackgroundColor(colors.cyan)
     term.clear()
-
     x,y = term.getSize()
+
+    local abc = window.create(term.current(),6,4,(x-11),(y-11))
 
     term.setCursorPos((x/2 - 8 ),2) 
     term.write("simpleOS license")
@@ -18,17 +23,13 @@ while pressNext do
     term.setCursorPos((x-11),(y-2))
     term.write("next >")
 
-    term.setCursorPos((x/2),(y-2))
-    local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/version.txt")
-    local versiontext = versionhttp.readAll()
+    term.setCursorPos((x/2 - 20),(y-2))
     term.write("Version "..versiontext)
 
     term.setCursorPos(1,1)
 
 
-    local abc = window.create(term.current(),6,4,(x-11),(y-11))
-
-
+    
     abc.setBackgroundColor(colors.black) 
     cctext = require("cc.strings")
 
@@ -89,7 +90,7 @@ while pressNext do
         if lx>(x-12) and lx<(x-5) and ly == (y-2) then
         print("next") 
         pressNext = false
-        shell.run("installer/beforedownload.lua")
+        shell.run("installer/installerfiles.lua")
         end
     end
 

@@ -6,15 +6,14 @@ local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleO
 local versiontext = versionhttp.readAll()
 
 while pressNext do
-
     term.setBackgroundColor(colors.cyan)
     term.clear()
     x,y = term.getSize()
 
     local abc = window.create(term.current(),6,4,(x-11),(y-11))
 
-    term.setCursorPos((x/2 - 8 ),2)
-    term.write("install simpleOS")
+    term.setCursorPos((x/2 - 28),2) 
+    term.write("Make sure there are no files in the following locations:")
 
     term.setBackgroundColor(colors.gray)
     term.setCursorPos((6),(y-2))
@@ -32,7 +31,7 @@ while pressNext do
     abc.setBackgroundColor(colors.black) 
     cctext = require("cc.strings")
 
-    local text = "Do you want to install simpleOS?\nIf so, click 'next' otherwise click 'back'"
+    local text = "./libs/\n./installer/\n./system/\n./startup.lua\n./simpleos/"
     local lines = cctext.wrap(text,(x-11))
     
     for i = 1, #lines do
@@ -43,9 +42,6 @@ while pressNext do
         i = i+1
     end
         abc.scroll(scrollPos)
-
-
-
 
 
 
@@ -83,13 +79,13 @@ while pressNext do
         if lx<12 and lx>5 and ly == (y-2) then
             print("back")
             pressNext = false
-            shell.run("clear")
+            shell.run("installer/license.lua")
         end
         
         if lx>(x-12) and lx<(x-5) and ly == (y-2) then
         print("next") 
         pressNext = false
-        shell.run("installer/license.lua")
+        shell.run("installer/beforedownload.lua")
         end
     end
 
