@@ -22,6 +22,8 @@ while pressNext do
     term.setCursorPos((x-11),(y-2))
     term.write("next >")
 
+    term.setBackgroundColor(colors.cyan)
+
     term.setCursorPos((x/2 - 20),(y-2))
     term.write("Version "..versiontext)
 

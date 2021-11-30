@@ -22,6 +22,8 @@ while pressNext do
     term.setCursorPos((x-14 ),(y-2))
     term.write("install >")
 
+    term.setBackgroundColor(colors.cyan)
+
     term.setCursorPos((x/2 - 20),(y-2))
     term.write("Version "..versiontext)
 
