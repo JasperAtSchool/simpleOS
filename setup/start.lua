@@ -2,7 +2,7 @@ local pressNext = true
 local scrollPos = 0
 local scrollTextLength = 0
 
-local versionhttp = http.get("https://raw.githubusercontent.com/DJj123dj/simpleOS/main/version.txt")
+local versionhttp = http.get("https://raw.githubusercontent.com/JasperAtSchool/simpleOS/main/version.txt")
 local versiontext = versionhttp.readAll()
 
 while pressNext do
